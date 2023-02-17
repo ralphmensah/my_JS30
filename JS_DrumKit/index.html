@@ -59,6 +59,7 @@
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
     <script>
+        // TODO: Add sound on button click
 
         function playSound(e){
             const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
@@ -74,7 +75,7 @@
             if(e.propertyName !== 'transform') return; //skip if not transform
             this.classList.remove('playing') //remove playing if has transform property
         }
-        
+
         const keys = document.querySelectorAll('.key');
         keys.forEach(key=> key.addEventListener('transitionend',removeTransition))
 
